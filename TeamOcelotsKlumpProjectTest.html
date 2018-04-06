@@ -32,13 +32,8 @@
 			<h1>Part 2</h1>
 			<script>
 			function getJSON(url){
-				$.ajax({
-					url: url,
-					dataType: 'json',
-					success: function(data){
-						document.write(data);
-					}
-					});
+				memberUrl = url;
+				document.write(memberUrl);
 			}
 			
 			
