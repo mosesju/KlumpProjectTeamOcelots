@@ -33,10 +33,20 @@
 			<script>
 			function getJSON(url){
 				memberUrl = url;
-				$.getJSON(memberUrl + "?callback=?", function(data){
-					$.each(result, function(i, field){
-						$("div").append(field + " ");
-					});
+				$.ajax({
+					type: 'GET',
+					url: memberUrl,
+					data: {get_param: 'value'},
+					dataType: 'json',
+					success: function(data){
+						$.each(data, function(index, element){
+							$('body').append($('<div>',{
+								text: element.name
+							}));
+							
+						});
+					}
+					
 				
 				});
 			}
