@@ -33,7 +33,7 @@
 			<script>
 			function getJSON(url){
 				memberUrl = url;
-				$.getJSON(memberUrl, function(data){
+				$.getJSON(memberUrl + "?callback=?", function(data){
 					$.each(result, function(i, field){
 						$("div").append(field + " ");
 					});
