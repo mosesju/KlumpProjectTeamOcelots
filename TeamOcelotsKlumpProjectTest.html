@@ -33,7 +33,11 @@
 			<script>
 			function getJSON(url){
 				console.log(url);
-				//$.getJSON
+				$.getJSON(url, function(data){
+					console.log(data);
+					document.write(data);
+				
+				});
 			}
 			
 			
