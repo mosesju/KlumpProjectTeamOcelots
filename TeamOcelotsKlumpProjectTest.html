@@ -33,7 +33,12 @@
 			<script>
 			function getJSON(url){
 				memberUrl = url;
-				document.write(memberUrl);
+				$.getJSON(memberUrl, function(data){
+					$.each(result, function(i, field){
+						$("div").append(field + " ");
+					});
+				
+				});
 			}
 			
 			
