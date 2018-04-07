@@ -27,7 +27,7 @@
 				$("#PR").append(data.PreferredName);
 				$("#TN").append(data.TeamName);
 				$("#SL").append(data.SeatLocation);
-			});
+				});
 				/*$.ajax({
 					url:url,
 					dataType: 'jsonp',
@@ -45,7 +45,10 @@
 				
 				});*/
 			}
-			
+			function addStudent(){
+				var person = prompt("input json url", "");
+				getJSON(person);
+			}
 			
 		</script>
 	</head>
@@ -55,6 +58,7 @@
 		
 		<div>
 			<h1>Team Ocelots Klump Product</h1>
+			<!--
 			<p>
 			<input onclick="getJSON(urls[0])" type="button" value="Mike's JSON"/>
 			<input onclick="getJSON(urls[1])" type="button" value="Jake's JSON"/>
@@ -62,6 +66,9 @@
 			<input onclick="getJSON(urls[3])" type="button" value="Jace's JSON"/>
 			<input onclick="getJSON(urls[4])" type="button" value="Thad's JSON"/>
 			</p>
+			-->
+			<p><input onclick="addStudent()" type="button" value="Add Student"/></p>
+		
 		</div>
 		<div style="background-color:lightgreen">
 			<h2>JSON Data:</h2>
