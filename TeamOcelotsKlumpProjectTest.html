@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
-		<script type = "text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<!-- <script type = "text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<title> Team Ocelots Klump Product </title>
 		<script>
 		var urls = ["https://michael-pedzimaz-webapp.azurewebsites.net/my-information.json",
@@ -12,6 +13,23 @@
 						"https://softwareengjmh.azurewebsites.net/format.JSON",
 						"https://newtestdocument.azurewebsites.net/Format.json"];
 		
+		/*$(document).ready(function(){
+			//$("#btnMikeJson").click(function(){
+		}*/
+		</script>
+		<script>
+			function getJSON(url){
+				$.getJSON(url, function(data){
+				$("#FN").append(data.FirstName);
+				$("#LN").append(data.LastName);
+				$("#PR").append(data.PreferredName);
+				$("#TN").append(data.TeamName);
+				$("#SL").append(data.SeatLocation);
+			});
+				
+			}
+			
+			
 		</script>
 	</head>
 		
@@ -28,31 +46,13 @@
 			<input onclick="getJSON(urls[4])" type="button" value="Thad's JSON"/>
 			</p>
 		</div>
-		<div>
-			<h1>Part 2</h1>
-			<script>
-			function getJSON(url){
-				memberUrl = url;
-				$.ajax({
-					type: 'GET',
-					url: memberUrl,
-					data: {get_param: 'value'},
-					dataType: 'json',
-					success: function(data){
-						$.each(data, function(index, element){
-							$('body').append($('<div>',{
-								text: element.name
-							}));
-							
-						});
-					}
-					
-				
-				});
-			}
-			
-			
-			</script>
+		<div style="background-color:lightgreen">
+			<h2>JSON Data:</h2>
+			<p id="FN">First Name: </p>
+			<p id="LN">Last Name: </p>
+			<p id="PR">Preferred name: </p>
+			<p id="TN">Team Name: </p>
+			<p id="SL">Seat Location: </p>
 		
 		</div>
 		<script>
