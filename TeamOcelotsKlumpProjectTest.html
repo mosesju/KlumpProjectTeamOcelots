@@ -30,6 +30,7 @@
 					url:url,
 					dataType: 'jsonp',
 					success:function(data){
+						alert(data);
 						$("#FN").append(data.FirstName);
 						$("#LN").append(data.LastName);
 						$("#PR").append(data.PreferredName);
