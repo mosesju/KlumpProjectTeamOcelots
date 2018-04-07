@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-	
-	<body>
+	<head>
 		<meta charset="UTF-8">
 		<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css"> -->
 		<!-- <script type = "text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
@@ -19,6 +18,12 @@
 			//$("#btnMikeJson").click(function(){
 		}*/
 		</script>
+
+
+
+	</head>
+	<body>
+		
 	
 		
 		<div>
@@ -48,12 +53,12 @@
 			function getJSON(url){
 				$.getJSON(url, function(data){
 				console.log(data);
-				$("#FN").append(data.FirstName);
+				/*$("#FN").append(data.FirstName);
 				$("#LN").append(data.LastName);
 				$("#PR").append(data.PreferredName);
 				$("#TN").append(data.TeamName);
 				$("#SL").append(data.SeatLocation);
-				});
+				});*/
 				/*$.ajax({
 					url:url,
 					dataType: 'jsonp',
