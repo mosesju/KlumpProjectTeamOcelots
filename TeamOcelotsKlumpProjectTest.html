@@ -19,14 +19,29 @@
 		</script>
 		<script>
 			function getJSON(url){
-				$.getJSON(url, function(data){
+				/*$.getJSON(url, function(data){
 				$("#FN").append(data.FirstName);
 				$("#LN").append(data.LastName);
 				$("#PR").append(data.PreferredName);
 				$("#TN").append(data.TeamName);
 				$("#SL").append(data.SeatLocation);
-			});
+			});*/
+				$.ajax({
+					url:url,
+					dataType: 'jsonp',
+					success:function(data){
+						$("#FN").append(data.FirstName);
+						$("#LN").append(data.LastName);
+						$("#PR").append(data.PreferredName);
+						$("#TN").append(data.TeamName);
+						$("#SL").append(data.SeatLocation);
+						alert("Success!");
+					},
+					error:function(){
+						alert("Error");
+					}
 				
+				});
 			}
 			
 			
