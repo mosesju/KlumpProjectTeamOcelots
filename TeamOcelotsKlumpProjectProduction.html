@@ -2,43 +2,29 @@
 
 <!DOCTYPE html>
 <html>
-<body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-<h2>The Ocelots Klump Project</h2>
+	<head>
+		<title> Team Ocelots Klump Project </title>
+	</head>
 
-<p><input onclick="AddStudent()" type="button" value="Add Student"/></p>
+	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<p><input onclick="showJson()" type="button" value="Show Json"/></p>
+		<script>
+			$.ajax({
+				url: 'TeamOcelotsKlumpProjectTest.json',
+				dataType: 'json',
+				type: 'get',
+				cache: false,
+				success: function(data) {
+					$(data.Users).each(function(index, value) {
+						console.log(value.TeamName);
+					})
+				}
+			})
 
-  <script>
- function AddStudent(){
-	var person = prompt("Please enter your json url:", "");
-	getJson(person);
- }
-  
-function showJson(key) {
-	document.getElementById('jsondisplay').innerHTML = JSON.stringify(jsonFiles[key]);
-	
-}
-</script>
 
-<script>
-var jsonFiles = {};
+		</script>
+	</body>
 
-function getJson(url){
-	$.getJSON(url, function(data){
-		console.log(data);		
-		var kid = document.getElementById(seat).innerHTML = "<input onclick=\"showJson(id)";
-		JsonArray = [];
-		JsonArray.push(kid);
-		console.log(JsonArray);
-	});
-}
-
-</script>
-   
-<p id="jsondisplay"></p>
-</body>
 </html>
-
