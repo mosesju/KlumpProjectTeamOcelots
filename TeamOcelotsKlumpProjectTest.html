@@ -34,14 +34,15 @@ function getJSON(url){
 		type: 'get',
 		cache: false,
 		success: function(data) {
-			$.each(data, function(index, element){
+			console.log(data);
+			/*$.each(data, function(index, element){
 				$("#FN").append(data.FirstName);
 				$("#LN").append(data.LastName);
 				$("#PR").append(data.PreferredName);
 				$("#TN").append(data.TeamName);
 				$("#SL").append(data.SeatLocation);
 				$("#Role").append(data.Role);
-			
+			*/
 			});
 		
 		
