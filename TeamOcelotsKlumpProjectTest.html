@@ -25,9 +25,69 @@
 				}	
 			});
 		}
+		function getJsonJake(){
+			$.ajax({
+				url: "files/Jake/my-information.json",
+				dataType: 'json',
+				type: 'get',
+				cache: true,
+				success: function(data) {
+					console.log(data);
+					/*$(data.Users).each(function(index, value) {
+						console.log(data);
+					*/	
+				}	
+			});
+		}
+		function getJsonJulian(){
+			$.ajax({
+				url: "files/Julian/my-information.json",
+				dataType: 'json',
+				type: 'get',
+				cache: true,
+				success: function(data) {
+					console.log(data);
+					/*$(data.Users).each(function(index, value) {
+						console.log(data);
+					*/	
+				}	
+			});
+		}
+		function getJsonJace(){
+			$.ajax({
+				url: "files/Jace/my-information.json",
+				dataType: 'json',
+				type: 'get',
+				cache: true,
+				success: function(data) {
+					console.log(data);
+					/*$(data.Users).each(function(index, value) {
+						console.log(data);
+					*/	
+				}	
+			});
+		}function getJsonThad(){
+			$.ajax({
+				url: "files/Thad/my-information.json",
+				dataType: 'json',
+				type: 'get',
+				cache: true,
+				success: function(data) {
+					console.log(data);
+					/*$(data.Users).each(function(index, value) {
+						console.log(data);
+					*/	
+				}	
+			});
+		}
 		</script>
 
 	<p><input onclick="getJsonMike()" type="button" value="Mike's JSON"/></p>
+	<p><input onclick="getJsonJake()" type="button" value="Mike's JSON"/></p>
+	<p><input onclick="getJsonJace()" type="button" value="Mike's JSON"/></p>
+	<p><input onclick="getJsonJulian()" type="button" value="Mike's JSON"/></p>
+	<p><input onclick="getJsonThad()" type="button" value="Mike's JSON"/></p>
+	
 	
 	</body>
 
