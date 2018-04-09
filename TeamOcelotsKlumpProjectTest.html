@@ -18,8 +18,9 @@
 		<script>
 		
 		function getJSON(url){
+			memberUrl = url;
 			$.ajax({
-				url: url, 
+				url: memberUrl, 
 				dataType: 'json',
 				type: 'get',
 				cache: true,
