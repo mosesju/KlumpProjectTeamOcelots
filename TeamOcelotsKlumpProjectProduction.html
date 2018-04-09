@@ -21,10 +21,13 @@
 						console.log(value.FirstName);
 					})
 				}
+				var FirstNameData = value.FirstName; 
+				document.getElementById("First_Name").innerHTML = JSON.stringigy(FirstNameData, undefined, 2);
 			})
-
-
 		</script>
+
+		<textarea id="First_Name"></textarea>
+
 	</body>
 
 </html>
