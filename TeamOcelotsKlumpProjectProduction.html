@@ -12,7 +12,6 @@
 
 		<script>
 
-		var FirstNameData = function () {
 			var fn;
 			$.ajax({
 				url: 'https://klumpprojectteamocelots.azurewebsites.net/TeamOcelotsKlumpProjectTest.json', 
@@ -25,17 +24,23 @@
 						console.log(value.FirstName);
 					})
 
+					<input type="button" onclick="data('printableArea')" value="print a div!" />
+
 					fn = data;
 				}	
 			});
-		}();
+		
+
+
+
+
 		</script>
 
 		<div id="printableArea">
 			<h1>Print Me</h1>
 		</div>
 
-		<input type="button" onclick="FirstNameData('printableArea')" value="print a div!" />
+		
 	</body>
 
 </html>
