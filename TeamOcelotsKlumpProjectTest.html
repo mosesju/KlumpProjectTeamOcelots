@@ -7,13 +7,19 @@
 	<meta charset="UTF-8">
 		<title> Team Ocelots Klump Project </title>
 	</head>
-
+	<script>
+		var urls = ["http://klumpprojectteamocelots.azurewebsites.net/files/Mike/my-information.json"];
+		
+		
+	</script>
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+		
 		<script>
+		
+		function getJSON(url){
 			$.ajax({
-				url: 'https://klumpprojectteamocelots.azurewebsites.net/files/Jake/my-information.json', 
+				url: url, 
 				dataType: 'json',
 				type: 'get',
 				cache: true,
@@ -24,9 +30,11 @@
 					*/	
 				}	
 			});
+		}
 		</script>
 
-
+	<p><input onclick="getJSON(urls[0])" type="button" value="Mike's JSON"/></p>
+	
 	</body>
 
 </html>
