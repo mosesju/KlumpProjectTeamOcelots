@@ -27,14 +27,15 @@ function addStudent(){
 <script>
 
 function getJSON(url){
-
+	console.log(url);
 	$.ajax({
 		url: url,
 		dataType: 'json',
 		type: 'get',
 		cache: false,
 		success: function(data) {
-			$.each(data, function(index, element){
+			console.log(data);
+			/*$.each(data, function(index, element){
 				$("#FN").append(data.FirstName);
 				$("#LN").append(data.LastName);
 				$("#PR").append(data.PreferredName);
@@ -43,7 +44,7 @@ function getJSON(url){
 				$("#Role").append(data.Role);
 			
 			});
-		
+			*/
 		
 			/*$(data.Users).each(function(index, value) {
 				console.log(value.FirstName);
@@ -79,13 +80,13 @@ function getJSON(url){
 /*function getJSON(url){
 	$.getJSON(url, function(data){
 		console.log(data);
-	/*$("#FN").append(data.FirstName);
+	$("#FN").append(data.FirstName);
 	$("#LN").append(data.LastName);
 	$("#PR").append(data.PreferredName);
 	$("#TN").append(data.TeamName);
 	$("#SL").append(data.SeatLocation);
-	});*/
-	/*$.ajax({
+	});
+	$.ajax({
 		url:url,
 		dataType: 'jsonp',
 		success:function(data){
@@ -99,10 +100,10 @@ function getJSON(url){
 		error:function(){
 			alert("Error");
 		}
-	*/
+	
 	});
 }	
-*/	
+*/
 </script>
 		
 </body>
