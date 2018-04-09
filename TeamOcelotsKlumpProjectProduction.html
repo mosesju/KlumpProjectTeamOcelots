@@ -52,7 +52,7 @@ function getJson(url){
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.getJSON("https://softwareengjmh.azurewebsites.net/format.JSON", function(result){
+        $.getJSON("demo_ajax_json.js", function(result){
             $.each(result, function(i, field){
                 $("div").append(field + " ");
             });
