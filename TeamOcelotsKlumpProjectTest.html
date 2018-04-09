@@ -30,14 +30,18 @@ function addStudent(){
 
 function getJSON(url){
 	console.log(url);
-	$.ajax({
+	$.getJSON(url, function(data){
+		console.log(data);
+		
+	});
+	/*$.ajax({
 		url: url,
 		dataType: 'json',
 		type: 'GET',
 		cache: false,
 		success: function(data) {
 			console.log(data);
-			/*$.each(data, function(index, element){
+			$.each(data, function(index, element){
 				$("#FN").append(data.FirstName);
 				$("#LN").append(data.LastName);
 				$("#PR").append(data.PreferredName);
@@ -46,14 +50,14 @@ function getJSON(url){
 				$("#Role").append(data.Role);
 			
 			});
-			*/
+			
 		
-			/*$(data.Users).each(function(index, value) {
+			$(data.Users).each(function(index, value) {
 				console.log(value.FirstName);
 			})
-			*/
+			
 		}
-	});
+	});*/
 }
 </script>
 <h1>Team Ocelots Klump Product</h1>
