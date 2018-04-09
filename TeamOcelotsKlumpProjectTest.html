@@ -20,11 +20,8 @@
 		function getJSON(url){
 		console.log(url);
 		memberUrl = '"'+url+'"';
-		console.log(memberUrl);
-		console.log(typeof memberUrl);
-		console.log(typeof url);
 			$.ajax({
-				url: memberUrl,
+				url: "http://klumpprojectteamocelots.azurewebsites.net/files/Mike/my-information.json",
 				dataType: 'json',
 				type: 'get',
 				cache: true,
