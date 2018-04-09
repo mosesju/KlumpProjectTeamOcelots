@@ -11,6 +11,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<script>
+		var returnFN = function () {
+			var fn = null;
 			$.ajax({
 				url: 'https://klumpprojectteamocelots.azurewebsites.net/TeamOcelotsKlumpProjectTest.json', 
 				dataType: 'json',
@@ -18,10 +20,14 @@
 				cache: true,
 				success: function(data) {
 					$(data.Users).each(function(index, value) {
-						console.log(data);
+						console.log(value.FirstName);
 					})
+					fn = value.FirstName;
 				}	
-			})
+			});
+		}();
+
+
 		</script>
 
 
