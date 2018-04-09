@@ -18,15 +18,12 @@
 				cache: true,
 				success: function(data) {
 					$(data.Users).each(function(index, value) {
-						console.log(value.FirstName);
+						console.log(data);
 					})
-				}
-				var FirstNameData = value.FirstName; 
-				document.getElementById("First_Name").innerHTML = JSON.stringigy(FirstNameData, undefined, 2);
+				}	
 			})
 		</script>
 
-		<textarea id="First_Name"></textarea>
 
 	</body>
 
