@@ -1,5 +1,6 @@
 <!-- https://softwareengjmh.azurewebsites.net/format.JSON -->
 
+<!-- 
 <!DOCTYPE html>
 <html>
 <body>
@@ -39,5 +40,32 @@ function getJson(url){
 </script>
    
 <p id="jsondisplay"></p>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("https://softwareengjmh.azurewebsites.net/format.JSON", function(result){
+            $.each(result, function(i, field){
+                $("div").append(field + " ");
+            });
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
+
 </body>
 </html>
