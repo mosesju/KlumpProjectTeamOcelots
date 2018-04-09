@@ -36,9 +36,12 @@
 				cache: true,
 				success: function(data) {
 					console.log(data);
-					/*$(data.Users).each(function(index, value) {
-						console.log(data);
-					*/	
+					$("#FN").append(data.FirstName);
+					$("#LN").append(data.LastName);
+					$("#PR").append(data.PreferredName);
+					$("#TN").append(data.TeamName);
+					$("#SL").append(data.SeatLocation);
+					$("#Role").append(data.Role);
 				}	
 			});
 		}
@@ -50,9 +53,12 @@
 				cache: true,
 				success: function(data) {
 					console.log(data);
-					/*$(data.Users).each(function(index, value) {
-						console.log(data);
-					*/	
+					$("#FN").append(data.FirstName);
+					$("#LN").append(data.LastName);
+					$("#PR").append(data.PreferredName);
+					$("#TN").append(data.TeamName);
+					$("#SL").append(data.SeatLocation);
+					$("#Role").append(data.Role);
 				}	
 			});
 		}
@@ -64,9 +70,12 @@
 				cache: true,
 				success: function(data) {
 					console.log(data);
-					/*$(data.Users).each(function(index, value) {
-						console.log(data);
-					*/	
+					$("#FN").append(data.FirstName);
+					$("#LN").append(data.LastName);
+					$("#PR").append(data.PreferredName);
+					$("#TN").append(data.TeamName);
+					$("#SL").append(data.SeatLocation);
+					$("#Role").append(data.Role);
 				}	
 			});
 		}
@@ -78,9 +87,12 @@
 				cache: true,
 				success: function(data) {
 					console.log(data);
-					/*$(data.Users).each(function(index, value) {
-						console.log(data);
-					*/	
+					$("#FN").append(data.FirstName);
+					$("#LN").append(data.LastName);
+					$("#PR").append(data.PreferredName);
+					$("#TN").append(data.TeamName);
+					$("#SL").append(data.SeatLocation);
+					$("#Role").append(data.Role);
 				}	
 			});
 		}
@@ -96,12 +108,12 @@
 	
 	<div style="background-color:lightgreen">
 	<h2>JSON Data:</h2>
-	<p id="FN">First Name: </p><br>
-	<p id="LN">Last Name: </p><br>
-	<p id="PR">Preferred name: </p><br>
-	<p id="TN">Team Name: </p><br>
-	<p id="SL">Seat Location: </p><br>
-	<p id="Role">Role: </p><br>
+	<p id="FN">First Name: </p>
+	<p id="LN">Last Name: </p>
+	<p id="PR">Preferred name: </p>
+	<p id="TN">Team Name: </p>
+	<p id="SL">Seat Location: </p>
+	<p id="Role">Role: </p>
 
 	</div>
 	
