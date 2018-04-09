@@ -1,116 +1,32 @@
+<!-- https://softwareengjmh.azurewebsites.net/format.JSON -->
+
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
-<!-- <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css"> -->
-		
 
-<script>
-var urls = ["http://klumpprojectteamocelots.azurewebsites.net/files/Mike/my-information.json",
-				"http://klumpprojectteamocelots.azurewebsites.net/files/Jake/my-information.json",
-				"http://klumpprojectteamocelots.azurewebsites.net/files/Julian/my-information.json",
-				"http://klumpprojectteamocelots.azurewebsites.net/files/Jace/my-information.json",
-				"http://klumpprojectteamocelots.azurewebsites.net/files/Thad/my-information.json"];
+	<head>
+		<title> Team Ocelots Klump Project </title>
+	</head>
 
-function addStudent(){
-	var person = prompt("input json url", "");
-	getJSON(person);
-}
+	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-</script>
-
-
-</head>
-<body>
-
-<script>
-
-function getJSON(url){
-	console.log(url);
-	$.getJSON(url, function(data){
-		console.log(data);
-		
-	});
-	/*$.ajax({
-		url: url,
-		dataType: 'json',
-		type: 'GET',
-		cache: false,
-		success: function(data) {
-			console.log(data);
-			$.each(data, function(index, element){
-				$("#FN").append(data.FirstName);
-				$("#LN").append(data.LastName);
-				$("#PR").append(data.PreferredName);
-				$("#TN").append(data.TeamName);
-				$("#SL").append(data.SeatLocation);
-				$("#Role").append(data.Role);
-			
-			});
-			
-		
-			$(data.Users).each(function(index, value) {
-				console.log(value.FirstName);
+		<script>
+			$.ajax({
+				url: 'https://klumpprojectteamocelots.azurewebsites.net/files/Mike/my-information.json', 
+				dataType: 'json',
+				type: 'get',
+				cache: true,
+				success: function(data) {
+					console.log(data);
+					/*$(data.Users).each(function(index, value) {
+						console.log(data);
+					*/
+					})
+				}	
 			})
-			
-		}
-	});*/
-}
-</script>
-<h1>Team Ocelots Klump Product</h1>
+		</script>
 
-<p>
-<input onclick="getJSON(urls[0])" type="button" value="Mike's JSON"/>
-<input onclick="getJSON(urls[1])" type="button" value="Jake's JSON"/>
-<input onclick="getJSON(urls[2])" type="button" value="Julian's JSON"/>
-<input onclick="getJSON(urls[3])" type="button" value="Jace's JSON"/>
-<input onclick="getJSON(urls[4])" type="button" value="Thad's JSON"/>
-</p>
-<p><input onclick="addStudent()" type="button" value="Add Student"/></p>
-	
 
-<div style="background-color:lightgreen">
-	<h2>JSON Data:</h2>
-	<p id="FN">First Name: </p><br>
-	<p id="LN">Last Name: </p><br>
-	<p id="PR">Preferred name: </p><br>
-	<p id="TN">Team Name: </p><br>
-	<p id="SL">Seat Location: </p><br>
-	<p id="Role">Role: </p><br>
+	</body>
 
-</div>
-<script>
-/*function getJSON(url){
-	$.getJSON(url, function(data){
-		console.log(data);
-	$("#FN").append(data.FirstName);
-	$("#LN").append(data.LastName);
-	$("#PR").append(data.PreferredName);
-	$("#TN").append(data.TeamName);
-	$("#SL").append(data.SeatLocation);
-	});
-	$.ajax({
-		url:url,
-		dataType: 'jsonp',
-		success:function(data){
-			$("#FN").append(data.FirstName);
-			$("#LN").append(data.LastName);
-			$("#PR").append(data.PreferredName);
-			$("#TN").append(data.TeamName);
-			$("#SL").append(data.SeatLocation);
-			alert("Success!");
-		},
-		error:function(){
-			alert("Error");
-		}
-	
-	});
-}	
-*/
-</script>
-		
-</body>
 </html>
