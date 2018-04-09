@@ -8,7 +8,7 @@
 		<title> Team Ocelots Klump Project </title>
 	</head>
 	<script>
-		var urls = ["http://klumpprojectteamocelots.azurewebsites.net/files/Mike/my-information.json"];
+		var urls = ['"http://klumpprojectteamocelots.azurewebsites.net/files/Mike/my-information.json"'];
 		
 		
 	</script>
@@ -19,7 +19,7 @@
 		
 		function getJSON(url){
 			$.ajax({
-				url: '"'+url+'"',
+				url: url,
 				dataType: 'json',
 				type: 'get',
 				cache: true,
