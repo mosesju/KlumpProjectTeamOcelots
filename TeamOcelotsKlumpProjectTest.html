@@ -19,9 +19,12 @@
 				cache: true,
 				success: function(data) {
 					console.log(data);
-					/*$(data.Users).each(function(index, value) {
-						console.log(data);
-					*/	
+					$("#FN").append(data.FirstName);<br>
+					$("#LN").append(data.LastName);<br>
+					$("#PR").append(data.PreferredName);<br>
+					$("#TN").append(data.TeamName);<br>
+					$("#SL").append(data.SeatLocation);<br>
+					$("#Role").append(data.Role);<br>
 				}	
 			});
 		}
@@ -90,6 +93,17 @@
 	<input onclick="getJsonJulian()" type="button" value="Julian's JSON"/>
 	<input onclick="getJsonThad()" type="button" value="Thad's JSON"/>
 	</p>
+	
+	<div style="background-color:lightgreen">
+	<h2>JSON Data:</h2>
+	<p id="FN">First Name: </p><br>
+	<p id="LN">Last Name: </p><br>
+	<p id="PR">Preferred name: </p><br>
+	<p id="TN">Team Name: </p><br>
+	<p id="SL">Seat Location: </p><br>
+	<p id="Role">Role: </p><br>
+
+	</div>
 	
 	
 	</body>
