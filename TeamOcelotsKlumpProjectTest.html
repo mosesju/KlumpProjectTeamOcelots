@@ -39,6 +39,20 @@
 				}	
 			});
 		}
+		function getJsonJace(){
+			$.ajax({
+				url: "files/Jace/my-information.json",
+				dataType: 'json',
+				type: 'get',
+				cache: true,
+				success: function(data) {
+					console.log(data);
+					/*$(data.Users).each(function(index, value) {
+						console.log(data);
+					*/	
+				}	
+			});
+		}
 		function getJsonJulian(){
 			$.ajax({
 				url: "files/Julian/my-information.json",
@@ -53,20 +67,7 @@
 				}	
 			});
 		}
-		function getJsonJace(){
-			$.ajax({
-				url: "files/Jace/my-information.json",
-				dataType: 'json',
-				type: 'get',
-				cache: true,
-				success: function(data) {
-					console.log(data);
-					/*$(data.Users).each(function(index, value) {
-						console.log(data);
-					*/	
-				}	
-			});
-		}function getJsonThad(){
+		function getJsonThad(){
 			$.ajax({
 				url: "files/Thad/my-information.json",
 				dataType: 'json',
@@ -82,11 +83,13 @@
 		}
 		</script>
 
-	<p><input onclick="getJsonMike()" type="button" value="Mike's JSON"/></p>
-	<p><input onclick="getJsonJake()" type="button" value="Mike's JSON"/></p>
-	<p><input onclick="getJsonJace()" type="button" value="Mike's JSON"/></p>
-	<p><input onclick="getJsonJulian()" type="button" value="Mike's JSON"/></p>
-	<p><input onclick="getJsonThad()" type="button" value="Mike's JSON"/></p>
+	<p>
+	<input onclick="getJsonMike()" type="button" value="Mike's JSON"/>
+	<input onclick="getJsonJake()" type="button" value="Jake's JSON"/>
+	<input onclick="getJsonJace()" type="button" value="Jace's JSON"/>
+	<input onclick="getJsonJulian()" type="button" value="Julian's JSON"/>
+	<input onclick="getJsonThad()" type="button" value="Thad's JSON"/>
+	</p>
 	
 	
 	</body>
