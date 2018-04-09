@@ -12,19 +12,22 @@
 
 		<script>
 			$.ajax({
-				url: 'https://klumpprojectteamocelots.azurewebsites.net/TeamOcelotsKlumpProjectTest.json',
+				url: 'https://klumpprojectteamocelots.azurewebsites.net/TeamOcelotsKlumpProjectTest.json', 
 				dataType: 'json',
 				type: 'get',
-				cache: false,
+				cache: true,
 				success: function(data) {
 					$(data.Users).each(function(index, value) {
 						console.log(value.FirstName);
 					})
 				}
+				var FirstNameData = value.FirstName; 
+				document.getElementById("First_Name").innerHTML = JSON.stringigy(FirstNameData, undefined, 2);
 			})
-
-
 		</script>
+
+		<textarea id="First_Name"></textarea>
+
 	</body>
 
 </html>
