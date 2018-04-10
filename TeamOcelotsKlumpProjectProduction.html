@@ -12,26 +12,28 @@
 
 		<script>
 
-		function printJson(pjs) {
-
 			$.ajax({
 				url: 'https://klumpprojectteamocelots.azurewebsites.net/TeamOcelotsKlumpProjectTest.json', 
 				dataType: 'json',
 				type: 'get',
 				cache: true,
 				success: function(data) {
-					console.log(data);
+					
+					var FN = $(data.Users).each(function(index, value) {
+						console.log(value.FirstName);
+					})
 				}	
-			});
 
-		}
+				document.body.innerHTML = FN;
+			});
+		
 		</script>
 
 		<div id="printableArea">
 			<h1>Print Me</h1>
 		</div>
 
-		<input type="button" onclick="pjs('printableArea')" value="print a div!" />
+		<input type="button" onclick="('printableArea')" value="print a div!" />
 
 		<p id="jsonDisplay"></p>
 	</body>
