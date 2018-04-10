@@ -22,17 +22,20 @@
 					var FN = $(data.Users).each(function(index, value) {
 						console.log(value.FirstName);
 					})
+
+					document.body.innerHTML = FN;
 				}	
+
 
 			});
 		
 		</script>
 
 		<div id="printableArea">
-			<h1>Print Me</h1>
+			<h1>Team Ocelots Klump Project</h1>
 		</div>
 
-		<input type="button" onclick="('printableArea')" value="print a div!" />
+		<input type="button" onclick="FN('printableArea')" value="Print Json Info!" />
 
 		<p id="jsonDisplay"></p>
 	</body>
