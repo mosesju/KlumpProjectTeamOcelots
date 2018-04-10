@@ -19,15 +19,13 @@
 				cache: true,
 				success: function(data) {
 					
-					var FN = $(data.Users).each(function(index, value) {
+					$(data.Users).each(function(index, value) {
 						console.log(value.FirstName);
-					})
+					
 
-					var LN = $(data.Users).each(function(index, value) { 
+					$(data.Users).each(function(index, value) { 
 						console.log(value.LastName);
-					})
-					console.log(LN);
-
+					
 				}	
 			});
 		
