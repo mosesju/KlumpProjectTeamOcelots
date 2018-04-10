@@ -20,7 +20,7 @@
 				cache: true,
 				success: function(data) {
 					
-					$(data.Users).each(function(index, value) {
+					var FN = $(data.Users).each(function(index, value) {
 						console.log(value.FirstName);
 					})
 
@@ -30,10 +30,6 @@
 				}	
 			});
 		
-
-
-
-
 		</script>
 
 		<div id="printableArea">
@@ -41,6 +37,8 @@
 		</div>
 
 		<input type="button" onclick="data('printableArea')" value="print a div!" />
+
+		<p id="jsonDisplay"></p>
 	</body>
 
 </html>
