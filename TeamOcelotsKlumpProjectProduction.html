@@ -19,7 +19,7 @@
 				cache: true,
 				success: function(data) {
 					
-					var FN = $(data.Users).each(function(index, value) {
+					var JSON = $(data.Users).each(function(index, value) {
 						console.log(value.FirstName);
 						console.log(value.LastName);
 						console.log(value.PreferredName);
@@ -27,8 +27,7 @@
 						console.log(value.SeatLocation);
 						console.log(value.Role);
 					})
-
-				}	
+				},3000)
 			});
 		
 		</script>
