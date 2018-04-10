@@ -19,15 +19,20 @@
 				cache: true,
 				success: function(data) {
 					
-					$(data.Users).each(function(index, value) {
+					var FN = $(data.Users).each(function(index, value) {
 						console.log(value.FirstName);
-					}
-					
+					})
 
-					$(data.Users).each(function(index, value) { 
+					var LN = $(data.Users).each(function(index, value) {
+						var firstname = FN.toString(); 
 						console.log(value.LastName);
-					}
-					
+					})
+
+					var PN = $(data.Users).each(function(index, value) {
+						var firstname = FN.toString(); 
+						console.log(value.PreferredName);
+					})
+
 				}	
 			});
 		
