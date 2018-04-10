@@ -12,7 +12,6 @@
 
 		<script>
 
-			var fn;
 			$.ajax({
 				url: 'https://klumpprojectteamocelots.azurewebsites.net/TeamOcelotsKlumpProjectTest.json', 
 				dataType: 'json',
@@ -24,9 +23,7 @@
 						console.log(value.FirstName);
 					})
 
-					fn = data;
-
-					console.log(data);
+					console.log(FN);
 				}	
 			});
 		
@@ -36,7 +33,7 @@
 			<h1>Print Me</h1>
 		</div>
 
-		<input type="button" onclick="data('printableArea')" value="print a div!" />
+		<input type="button" onclick="('printableArea')" value="print a div!" />
 
 		<p id="jsonDisplay"></p>
 	</body>
