@@ -25,8 +25,9 @@
 					$("#TN").append(data.TeamName);
 					$("#SL").append(data.SeatLocation);
 					$("#Role").append(data.Role);
-					document.getElementById("json").innerHtml = JSON.stringify(data, undefined, 2);
+					
 				}	
+				document.getElementById("json").innerHtml = JSON.stringify(data, undefined, 2);
 			});
 		}
 		function getJsonJake(){
