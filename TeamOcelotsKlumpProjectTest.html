@@ -25,6 +25,7 @@
 					$("#TN").append(data.TeamName);
 					$("#SL").append(data.SeatLocation);
 					$("#Role").append(data.Role);
+					document.getElementById("json").innerHtml = JSON.stringify(data, undefined, 2);
 				}	
 			});
 		}
@@ -117,6 +118,10 @@
 	<p id="Role">Role: </p>
 
 	</div>
+	<div style="background-color:lightred">
+	<h3>JSON String:</h3>
+	<pre id="json"></pre>
+	
 	
 	</body>
 
